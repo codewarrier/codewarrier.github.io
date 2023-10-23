@@ -1,7 +1,7 @@
 +++
 title = 'Project Rhythm'
 date = 2023-10-22T23:08:43-07:00
-draft = true
+draft = false
 +++
 
 
