@@ -1,0 +1,4 @@
+baseURL = 'https://codewarrier.github.io/'
+languageCode = 'en-us'
+title = "A. Warrier"
+theme = ["hugo-video", 'ananke']
