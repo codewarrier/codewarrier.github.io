@@ -245,8 +245,11 @@ Only one thread/goroutine can access the real-time clock at the same time. Read 
 Solution: We will do minimal process in the handlers and pass it via channel to other goroutines.
 
 # Future - Prototype to Product
- - TODO: Research vendors
- - TODO: Cost of small batch production
- - TODO: Explore https://easyeda.com/
- - TODO: Simpler design that reduces cost
+I am looking to get an Computer Science/Engineering Degree in the future. This project will definietly be something I carry with me. I hope I can take this prototype to the piloting stage -- and eventually, production and distribution. 
+
+Tasks for the future:
+ - Research vendors
+ - Cost of small batch production
+ - Explore https://easyeda.com/
+ - Simpler design that reduces cost and time to build 
 
