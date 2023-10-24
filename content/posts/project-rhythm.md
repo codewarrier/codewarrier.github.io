@@ -244,7 +244,7 @@ Only one thread/goroutine can access the real-time clock at the same time. Read 
 
 Solution: We will do minimal process in the handlers and pass it via channel to other goroutines.
 
-# Future - Manufacturing
+# Future - Prototype to Product
  - TODO: Research vendors
  - TODO: Cost of small batch production
  - TODO: Explore https://easyeda.com/
