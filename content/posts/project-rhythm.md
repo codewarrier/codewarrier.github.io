@@ -197,11 +197,21 @@ Once Rhythm receives time, it should correct its internal clock (DS3231), becuas
 
 ![Cardboard version](/images/IMG_1505.JPG)
 
- - Talk about the school lab
- - Teachers to thank
- - 3d Design 
-
 ### Wood version of enclosure
+
+Here is the online design of the wooden prototype (built via Onshape).
+
+![Onshape design](/images/Onshape1.png)
+
+![Onshape design](/images/Onshape2.png)
+
+
+Below is the laser cutter I used for the prototype from the LGHS Robotics Lab. 
+
+![Laser cutter at LGHS](/images/IMG_8606.jpg)
+
+![Laser cutter at LGHS](/images/IMG_8607.jpg)
+
 
 ![Wood version](/images/IMG_1508.JPG)
 
