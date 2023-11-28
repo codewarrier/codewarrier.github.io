@@ -7,13 +7,13 @@ draft = false
 
 ## Processing grief
 
-Last year, my beloved puppy, Kensi, who was only four years old, passed away due to a medical condition known as Gastric Dilatation-Volvulus (GDV). Feeding Kensi was always a bit of a challenge; she had a voracious appetite and would eagerly consume her meals in mere seconds. Despite our attempts to break her feedings into smaller portions, our busy family often found it difficult to keep track of what had been fed and what was left. This sometimes resulted in accidental overfeeding, as Kensi never seemed to resist the temptation of food. It's been said that some dogs lack the ability to recognize when they've had enough.
+Last year, my beloved puppy, Kensi, passed away due to a medical condition known as Gastric Dilatation-Volvulus (GDV). She was only four years old. Feeding Kensi was always a bit of a challenge; she had a voracious appetite and would eagerly consume her meals in mere seconds. Despite our attempts to break her meals into smaller portions, our busy family often found it difficult to keep track of what had been fed and what was left. This sometimes resulted in accidental overfeeding. It's been said that some dogs lack the ability to recognize when they've had enough food. 
 
 ![Kensi](/images/IMG_4761_Original.jpg)
 
 ## Redirecting grief - seeking a solution
 
-In my desire to address this issue for future dog parents, I began searching for a smartphone app that could serve as a reminder system. However, a noisy alarm that we'd simply dismiss wasn't the ideal solution. I envisioned creating a "visual alarm" that would be unobtrusive yet noticeable to everyone in the household. My goal was to avoid the complexities of developing an iPhone or Android app and spare my family from the constant presence of a smartphone.
+In my desire to address this issue for future dog parents, I began searching for a smartphone app that could serve as a reminder system. However, a phone app would both be impractical and a distrubance to the home; a noisy alarm would simply be dismissed. Not to mention, I realized it would be quite difficult to program an app for Android and iOS. I envisioned creating a "visual alarm" that would be unobtrusive yet noticeable to everyone in the household. 
 
 ## The idea in simple terms
  - A hardware gadget with bright LEDs
@@ -36,9 +36,9 @@ To make things even more convenient, there's an OEM case readily available that 
 
 ## Choice of software
 
-I came across TinyGo, a variant of Go, a language that appears better suited than using C. Go has a few high level language features that would help me avoid the usual struggle with C. Although the Circuit Bluefruit can run Python, I had reservations about the code being exposed to anyone who connected it as a USB drive. Opting for Go also presented an opportunity for me to delve into a new programming language.
+I came across TinyGo (a variant of Go), a language that appears to be better suited for this project than C. Go has a few high level language features that would help me avoid the usual struggle with C. Although the Circuit Bluefruit can run Python, I had reservations about the code being exposed to anyone who connected it as a USB drive. Choosing Go also presented an opportunity for me to explore a new programming language.
 
-TinyGo has many features of the parent language Go, but there are a few differences.
+I also want to point out that TinyGo has many features of the parent language Go, but there are also a few differences.
 
 ## Initial challenge
 
@@ -50,7 +50,7 @@ We take it for granted that we can get the current year, month, day, and time ac
 
 If our code needs to give the initial time to the clock, we need to know the time to begin with. But we can't call our real-time-clock, because it doesn't know the time yet! 
 
-It appears time is given out to everyone by [NTP servers](https://www.ntppool.org/en/), keepers of time for everyone on the internet. But where do they get their time? Apparently from many physical sources, some of which include GPS satelites. However that is too complicated to delve into now.
+It appears time is given out to everyone by [NTP servers](https://www.ntppool.org/en/), time keepers for everyone on the internet. But where do they get their time? Apparently from many physical sources, some of which include GPS satelites. However, that is a bit too complicated to delve into now. 
 
 In order for us to connect to NTP servers, we need internet or a wifi connection. We need to add another breakout board like the below.
 
@@ -58,13 +58,13 @@ In order for us to connect to NTP servers, we need internet or a wifi connection
 
 ### Making do without an additional Wifi Chip (Save $10)
 
-We need the current time only when manage a schedule (feeding timings and feeding count for my puppy), so it makes sense to send the current time along with the schedule via Bluetooth
+We need the current time only when managing a schedule (feeding timings and feeding count for my puppy), so it makes sense to send the current time along with the schedule via Bluetooth.
 
 Moreover, wifi requires another setup of SSID and Password via Bluetooth. Adding a wifi chip just to get time information from NTP is an overkill.
 
 ### Retaining time during power off
 
-I bought a RTC DS3231 from Amazon. It takes a rechargeable LR2032 as power backup for DS3231. However it seems unreliable in keeping time when powered off. For all practical purposes, I am going to keep this connected to wall power as much as possible.
+I bought a RTC DS3231 from Amazon. It takes a rechargeable LR2032 as power backup for DS3231. However it seems unreliable in keeping time when powered off. In order to be practical, I am going to keep this connected to wall power as much as possible.
 
 ![DS3231 Connection](/images/IMG_1474.jpg)
 
@@ -245,7 +245,7 @@ Only one thread/goroutine can access the real-time clock at the same time. Read 
 Solution: We will do minimal process in the handlers and pass it via channel to other goroutines.
 
 # Future - Prototype to Product
-I am looking to get an Computer Science/Engineering Degree in the future. This project will definietly be something I carry with me. I hope I can take this prototype to the piloting stage -- and eventually, production and distribution. 
+I am looking to get an Computer Science/Engineering Degree in the future, and this project will definietly be something I carry with me. I hope I can take this prototype to the piloting stage -- and eventually, production and distribution. 
 
 Tasks for the future:
  - Research vendors
